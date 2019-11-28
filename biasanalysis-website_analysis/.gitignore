@@ -1,0 +1,11 @@
+**/.DS_Store
+ghostdriver.log
+google-cloud-sdk/
+psycopg2-2.8.1/
+.vscode/
+env/
+google-cloud-python-master/
+mediabias-a30dc3f85643.json
+cnn/
+foxnews/
+*.sqlite

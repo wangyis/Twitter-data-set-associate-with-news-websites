@@ -1,0 +1,1 @@
+# this document will pre-process all news text before analysis portion
