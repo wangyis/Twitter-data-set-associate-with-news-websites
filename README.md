@@ -3,22 +3,41 @@ We built a data set containing data from Twitter associate with major news websi
 
 # Prerequisites
 The environment for running the code is python3.\
-Packages needed for extracting Twitter data:
-- tweepy \
-(See report in folder Twitter-data-set for more details)
+Packages needed for extracting Twitter data: (Read social_property_based_media_data_set_creation.pdf in folder Twitter-data-set for more details)
+- tweepy
 
-
-Packages needed for web-scraping:
+Packages needed for web-scraping: (Read report in folder news-website-web-scraping for more details)
 - Selenium
 - BeautifulSoup4
 - Re
 - Html2Text
 - Sqlite3
 - Google.cloud
-- articleDateExtractor \
-(See report in folder news-website-web-scraping for more details)
-
+- articleDateExtractor
 
 # Extract data from Twitter
+Run following command to get tweets from target accounts:
+```
+python get_tw.py -i <input file> -o <output file>
+```
+Input file should contain the list of usernames of Twitter accounts that we want to get tweets from. And the output would contain detailed json-formed tweets data including: (Please refer to social_property_based_media_data_set_creation.pdf in folder Twitter-data-set for more details)
+- tweet_id
+- time_stamp
+- screen_name
+- location
+- text
+- retweeted_id
+- quoted_id
+- mentions
+- hash_tags
+- urls
+- media_urls
+- retweet_acount
+
+Run following command to get follower imformation from target accounts:
+```
+python followers.py -i <input file> -o <output file>
+```
+Input file should contain the list of usernames of Twitter accounts that we want to get followers information from. And the output file will contain the unique ids for all Twitter users who are following the target accounts.
 
 # Extract data from news websites
