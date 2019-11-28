@@ -4,10 +4,10 @@ We built a data set containing data from Twitter associate with major news websi
 # Prerequisites
 Apply a Twitter developer account for getting data from Twitter. \
 Use pyhon3 to run the python code.\
-Packages needed for extracting Twitter data: (Read social_property_based_media_data_set_creation.pdf in folder Twitter-data-set for more details)
+Packages needed for extracting Twitter data: (Please refer to social_property_based_media_data_set_creation.pdf in folder Twitter-data-set for more details)
 - tweepy
 
-Packages needed for web-scraping: (Read report in folder news-website-web-scraping for more details)
+Packages needed for web-scraping: (Please refer to Amy Pandit - report for news website Web-scraping .pdf in folder news-website-web-scraping for more details)
 - Selenium
 - BeautifulSoup4
 - Re
@@ -54,10 +54,21 @@ We then uploaded the data into the Google Cloud Platform(GCP). We used Bigquery 
 
 # Extract data from news websites
 
-
+We also wrote code for web-scraping and the Twitter handle detection in FOX and CNN news websites. 
 
 extration.py contains all the code for extraction from news websites and saving to the database. This could potentially be split up into multiple files in the future for easier testing, scaling, and readability.
 
 dumpdata.py contains important code that is commented out -- it is used for opening sqlite and saving the extracted data to article_dump.csv. This could’ve also been put in a bash script. There is also a Google Cloud function declared with some usage also written in a main(), but it wasn’t
 used because of the issues with debugging Google Cloud. They could be tested in the future and used for automation, in addition to the sqlite code.
 
+Each row of scrapped data contains the following columns: (Please refer to Amy Pandit - report for news website Web-scraping .pdf in folder news-website-web-scraping for more details)
+- article_link
+- article_date
+- author_name
+- aurthor_handle
+- site
+- article_title
+- category
+- text_preview
+
+We also uploaded the data manually to GCP and the process getting data & upload can be automated in the future work. 
