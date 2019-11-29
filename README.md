@@ -58,6 +58,11 @@ We also wrote code for web-scraping and the Twitter handle detection in FOX and 
 
 extration.py contains all the code for extraction from news websites and saving to the database. This could potentially be split up into multiple files in the future for easier testing, scaling, and readability.
 
+run the extraction.py using the command:
+```
+python extraction.py
+```
+
 dumpdata.py contains important code that is commented out -- it is used for opening sqlite and saving the extracted data to article_dump.csv. This could’ve also been put in a bash script. There is also a Google Cloud function declared with some usage also written in a main(), but it wasn’t
 used because of the issues with debugging Google Cloud. They could be tested in the future and used for automation, in addition to the sqlite code.
 
